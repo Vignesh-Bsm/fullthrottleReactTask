@@ -28,12 +28,11 @@ class Calender extends React.Component{
                   startArr.push(tempVal.start_time)
             }
         
-         var count=0
-         for (const timeval of startArr) {
-            //  console.log(timeval.split(" ").splice(0,3).join(" "),"HEYYY")
+        //  for (const timeval of startArr) {
               
-           this.calConvValues.push(new Date(timeval.split(" ").splice(0,3).join(" ")))    
-         }
+        //    console.log( this.calConvValues.push(new Date(timeval.split(" ").splice(0,3).join(" "))),"333333")         
+        //  }
+        
          
         var uniqEventVal = [...new Set(this.calConvValues)];
             for(let i=0;i<=activity.length-1;i++){

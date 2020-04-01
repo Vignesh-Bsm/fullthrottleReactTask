@@ -29,21 +29,8 @@ class  UserModel extends React.Component {
          }
      }
 
-    viewCalendar(activity){
-        alert("hhhhiii")
-        return <Calender/>
-    //     let path = `/calendar`;
-    // this.props.history.push(path+activity );
-        // console.log("hiiii",this.isCalendar)
-       
-        // console.log("after",this.isCalendar)
-        // this.setState({
-        //     isCalendar:true
-        // })
-    }
 
      render(){
-    console.log(this.state.activity,"22222")
     const {activity}=this.state.activity
     return (
         <Modal
@@ -79,41 +66,8 @@ class  UserModel extends React.Component {
             <p>{key+1}.{act.start_time} to {act.end_time}</p>
             
         ))}
-        {/* <i onCLick={()=>this.viewCalendar}class="material-icons circle">user</i> */}
-      
-        {/* <p onClick={()=>this.viewCalendar()}>Click</p> */}
-        {/* <button onClick={(activity)=>this.viewCalendar(activity)}>View Activities</button> */}
-       
-       {/* <div className={this.state.isCalendar?"btntrue":"btnfalse"}> <FullCalendar
-        disabled="false"
-            defaultView="dayGridMonth"
-            header={{
-              left: "prev,next today",
-              center: "title",
-              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
-            }}
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            ref={this.calendarComponentRef}
-            weekends={this.state.calendarWeekends}
-            events={this.state.calendarEvents}
-            dateClick={this.handleDateClick}
-          /></div> */}
+        
          <Calender activity={this.state.activity} />
-        {/* {this.state.isCalendar?
-          <FullCalendar
-            defaultView="dayGridMonth"
-            header={{
-              left: "prev,next today",
-              center: "title",
-              right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
-            }}
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            ref={this.calendarComponentRef}
-            weekends={this.state.calendarWeekends}
-            events={this.state.calendarEvents}
-            dateClick={this.handleDateClick}
-          />
-       :null} */}
       </Modal>
     )
 }
