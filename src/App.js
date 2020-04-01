@@ -18,11 +18,7 @@ class App extends React.Component {
     })
    })
  }
- viewActivity=(user)=>{
-    
-     console.log(user)
-    
- }
+
   render(){
   return (
     <div className="App">
@@ -32,17 +28,9 @@ class App extends React.Component {
       <div className="col l6 offset-l3">  
        <ul className="collection">
       {this.state.userList.map((user,key)=><li key={key} class="collection-item avatar">
-      
-      
       <i class="material-icons circle">user</i>
       <span class="title">{user.real_name}</span>
-      {/* <p>First Line <br/>
-         Second Line
-      </p> */}
       <UserModel userdetails={user}/>
-      {/* <a onClick={()=>this.viewActivity(user)}class="secondary-content"><i  class="material-icons">send</i></a> */}
-       
-      
       </li>)}
       </ul>
       </div>   
