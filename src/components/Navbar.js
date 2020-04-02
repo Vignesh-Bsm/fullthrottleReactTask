@@ -6,8 +6,8 @@ import { Navbar,Icon,NavItem } from 'react-materialize';
 function Nav(){
     return (
         <Navbar
-  alignLinks="right"
-  brand={<a className="brand-logo" >Logo</a>}
+  alignLinks="left"
+  
   id="mobile-nav"
   menuIcon={<Icon>menu</Icon>}
   options={{
@@ -23,11 +23,9 @@ function Nav(){
   }}
 >
   <NavItem href="">
-    Getting started
+    <h5>FullThrottle Labs -- React Js Task</h5>
   </NavItem>
-  <NavItem href="">
-    Components
-  </NavItem>
+  
 </Navbar>
     )
 }

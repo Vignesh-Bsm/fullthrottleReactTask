@@ -14,7 +14,36 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.viewBtn{
+  background-color: #5d5a8c !important;
+}
+.collection-item{
+ background-color: #c5c2c3 !important;
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  margin: 0;
+  border-bottom: 2px solid #6f2e2e !important;
+}
+.red{
+  background-color: #47438a !important;
+}
+.title{
+  float:left;
+  font-weight: bolder;
+  margin:9px;
+}
+.modal-content{
+  background-color: #e6dfdf;
+}
+.modal-content h4{
+  background-color: #47438a;
+    color: #d6cece;
+    padding: 10px;
+    font-size: 27px;
+}
+.modal-content p{
+  font-size:15px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

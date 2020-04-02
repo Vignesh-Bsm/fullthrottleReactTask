@@ -23,13 +23,15 @@ class App extends React.Component {
   return (
     <div className="App">
       <Nav/>
-     <h1>userList</h1>
+     <h3>User Activity List</h3>
      <div className="row">  
       <div className="col l6 offset-l3">  
        <ul className="collection">
       {this.state.userList.map((user,key)=><li key={key} class="collection-item avatar">
-      <i class="material-icons circle">user</i>
+      <i class="material-icons circle red">play_arrow</i>
       <span class="title">{user.real_name}</span>
+      <span class="title">({user.id})</span>
+
       <UserModel userdetails={user}/>
       </li>)}
       </ul>

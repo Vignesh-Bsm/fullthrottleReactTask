@@ -3,15 +3,7 @@ import React from'react'
 import { withRouter } from 'react-router-dom';
 import 'materialize-css';
 import { Modal,Button} from 'react-materialize';
-import { render } from 'react-dom';
-import calendar from "./calender"
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
-import "@fullcalendar/core/main.css";
-import "@fullcalendar/daygrid/main.css";
-import "@fullcalendar/timegrid/main.css";
+
 import Calender from './calender';
 // import  { Redirect } from 'react-router-dom'
 
@@ -31,7 +23,10 @@ class  UserModel extends React.Component {
 
 
      render(){
+
+      
     const {activity}=this.state.activity
+   
     return (
         <Modal
         actions={[
@@ -39,7 +34,7 @@ class  UserModel extends React.Component {
         ]}
         bottomSheet={false}
         fixedFooter={false}
-        header="user"
+        header="User Details"
         id="Modal-0"
         open={false}
         options={{
@@ -58,9 +53,9 @@ class  UserModel extends React.Component {
         trigger={<Button className="viewBtn" node="button">View Activity</Button>}
       >
         <p>
-         <span><b>Name:</b></span>{this.state.name}
+         <span><b>Name:</b></span><b>{this.state.name}</b>
         </p>
-        <p><span><b>Location:</b></span>{this.state.location}</p>
+        <p><span><b>Location:</b></span><b>{this.state.location}</b></p>
         <h5>Activities</h5>
         {this.state.activity.map((act,key)=>(
             <p>{key+1}.{act.start_time} to {act.end_time}</p>
